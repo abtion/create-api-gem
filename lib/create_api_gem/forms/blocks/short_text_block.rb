@@ -18,10 +18,10 @@
 require_relative 'block'
 
 class ShortTextBlock < Block
-  attr_accessor :id, :title, :type, :ref, :description, :required, :max_length, :attachment
+  attr_accessor :id, :title, :type, :ref, :description, :required, :max_length, :attachment, :layout
 
   def initialize(id: nil, title: nil, type: :short_text, ref: nil, description: nil, required: nil,
-                 max_length: nil, attachment: nil)
+                 max_length: nil, attachment: nil, layout: nil)
     @id = id
     @title = title || DataGenerator.title
     @type = type
@@ -30,6 +30,7 @@ class ShortTextBlock < Block
     @required = required
     @max_length = max_length
     @attachment = attachment
+    @layout = layout
   end
 
   def payload
