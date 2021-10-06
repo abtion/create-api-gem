@@ -15,8 +15,10 @@
 # specific language governing permissions and limitations
 # under the License.
 
+require_relative 'block'
+
 class ThankYouScreen < Block
-  attr_accessor :title, :ref, :show_button, :button_text, :button_mode, :redirect_url, :share_icons, :attachment
+  attr_accessor :title, :ref, :show_button, :button_text, :button_mode, :redirect_url, :share_icons, :attachment, :id
 
   def initialize(title: nil, ref: nil, show_button: nil, button_text: nil, button_mode: nil, redirect_url: nil, share_icons: nil, attachment: nil, id: nil)
     @id = id

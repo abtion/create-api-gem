@@ -15,6 +15,8 @@
 # specific language governing permissions and limitations
 # under the License.
 
+require_relative "block"
+
 class WelcomeScreen < Block
   attr_accessor :id, :title, :ref, :type, :description, :show_button, :button_text, :attachment
 
