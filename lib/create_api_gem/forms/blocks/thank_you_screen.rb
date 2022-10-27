@@ -34,7 +34,7 @@ class ThankYouScreen < Block
 
   def self.from_response(response)
     properties = response[:properties]
-    block_params = response.keep_if { |k, _| k != :properties }
+    block_params = response.keep_if { |k, _| k != :properties && k != :type }
     params = properties.merge(block_params)
     ThankYouScreen.new(params)
   end
